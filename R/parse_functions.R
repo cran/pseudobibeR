@@ -27,7 +27,7 @@
 #'
 #' \describe{
 #' \item{f_01_past_tense}{Verbs in the past tense.}
-#' \item{f_02_perfect_aspect}{Verbs in the perfect aspect, indicated by "have" as an auxiliary verb (e.g. *I \[have\] written this sentence.*)"}
+#' \item{f_02_perfect_aspect}{Verbs in the perfect aspect, indicated by "have" as an auxiliary verb (e.g. *I \[have\] written this sentence.*)}
 #' \item{f_03_present_tense}{Verbs in the present tense.}
 #' }
 #'
@@ -338,7 +338,7 @@ parse_biber_features <- function(tokens, measure, normalize, engine = c("spacy",
   f_15_gerunds <- tokens %>%
     dplyr::filter(
       stringr::str_detect(.data$token, "ing$|ings$") == TRUE,
-      stringr::str_detect(.data$dep_rel, if (engine == "spacy") "nsub|dobj|pobj" else "nsubj|obj|obl|conj|nmod")
+      stringr::str_detect(.data$dep_rel, if (engine == "spacy") "csubj|nsub|dobj|pobj" else "nsubj|obj|obl|conj|nmod")
     ) %>%
     dplyr::filter(!.data$token %in% pseudobibeR::word_lists$gerund_stoplist)
 

@@ -72,7 +72,7 @@ indicate the location of the feature.
 
 \describe{
 \item{f_01_past_tense}{Verbs in the past tense.}
-\item{f_02_perfect_aspect}{Verbs in the perfect aspect, indicated by "have" as an auxiliary verb (e.g. \emph{I [have] written this sentence.})"}
+\item{f_02_perfect_aspect}{Verbs in the perfect aspect, indicated by "have" as an auxiliary verb (e.g. \emph{I [have] written this sentence.})}
 \item{f_03_present_tense}{Verbs in the present tense.}
 }
 }
